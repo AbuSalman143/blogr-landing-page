@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--White-text);
+    box-sizing: border-box;
+}
+
+
+
+:root{
+
+    /* ### Primary */
+    --Light-red-CTA-text: hsl(356, 100%, 66%);
+    --Very-light-red-CTA-hover-background: hsl(355, 100%, 74%);
+    --Very-dark-blue-headings: hsl(208, 49%, 24%);
+
+    /* ### Neutral */
+    --balck:black;
+    --White-text: hsl(0, 0%, 100%);
+    --Grayish-blue-footer-text: hsl(240, 5%, 89%);
+    --Very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
+    --Very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
+
+    /* ### Gradient */
+
+    /* Background gradient - Intro/CTA mobile nav: */
+
+    --Very-light-red: hsl(13, 100%, 72%);
+    --Light-red: hsl(353, 100%, 62%);
+
+    /* Background gradient - body: */
+
+    --Very-dark-gray-blue: hsl(237, 17%, 21%);
+    --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+}
+
+
+
+body{
+    background-color: rgba(244, 240, 240, 0.833);
+}
+
+/* =====================header========================= */
+
+.header-container{
+    
+    background-image: url(./images/bg-pattern-intro-desktop.svg),linear-gradient(90deg, var( --Very-light-red),var(--Light-red),var(--Light-red));;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-left-radius:25px ;
+    min-height: 70vh;
+    
+}
+.close_menu,.hamburger{
+    display: none;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 3%;
+    
+}
+.logo{
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.logo:hover{
+    transform: scale(1.5);
+}
+.nav-cantainer{
+   
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-cantainer ul {
+    display: flex;
+    gap: 5%;
+    width: 80%;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-cantainer ul .list{
+    position: relative;
+    cursor: pointer;
+}
+
+
+.nav-cantainer ul .list .menu-text-icon {
+  
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.fa-angle-up{
+    display: none;
+}
+
+
+.registor-container button{
+    border: none;
+    padding: 10px 15px;
+
+}
+.registor-container .login{
+    background: none;
+   font-weight: 500;
+    
+}
+
+.registor-container .sign-Up{
+    background: var(--White-text);
+    border-radius: 15px;
+    color: var(--Light-red);
+    font-weight: 500;
+    
+}
+.registor-container .sign-Up:hover{
+    cursor: pointer;
+    color: var(--White-text);
+    background: var(--Very-light-red-CTA-hover-background);
+}
+
+
+.drop_down_list{
+    display:none;
+ 
+ }
+ .drop_down_list ul{
+     display: flex;
+     flex-direction: column;
+     border-radius: 10px;
+     padding: 10% 15%; 
+     position: absolute;
+     width: 130%;
+     gap: 15px;
+     align-items: flex-start;
+     top: 40px;
+     background: var(--White-text);
+ }
+ .drop_down_list ul li{
+     color: var(--balck);
+ }
+ .drop_down_list ul li:hover{
+     font-weight: 600;
+     cursor: pointer;
+ }
+
+
+.header-content{
+   
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.heading{
+    display: flex;
+    gap: 6px;
+}
+.header-container h1{
+    font-size: 56px;
+    font-family: "Overpass", sans-serif;
+}
+.header-container p{
+    font-size: 24px;
+}
+.header-container .btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    width:25%;
+}
+.header-container .btn-container button{
+    padding: 15px 25px;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 25px;
+}
+.header-container .btn-container button:nth-child(1){
+    color: var(--Light-red);
+} 
+
+.header-container .btn-container button:nth-child(1):hover{
+    cursor: pointer;
+    color:var(--White-text);
+    background: var(--Very-light-red-CTA-hover-background);
+}
+
+.header-container .btn-container button:nth-child(2){
+    border: 2px solid var(--White-text);
+    background: none;
+    box-shadow: 0 0 5px;
+}
+
+.header-container .btn-container button:nth-child(2):hover{
+    cursor: pointer;
+    color:var(--Light-red);
+    background: var(--White-text);
+}
+
+
+
+/* =====================main section========================= */
+
+
+
+/* +++++++++++++ future ++++++++++++++++ */
+.future-container{
+    padding: 10% 5%;
+    display: flex;
+    
+}
+
+.future-content{
+    /* border: 2px solid red ; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    width: 50%;
+    position: relative;
+    min-height:560px ;
+    padding: 0 6%;
+    
+}
+.future-container h1{
+    color: var(--Very-dark-blue-headings);
+    font-family: "Overpass", sans-serif;
+    font-size: 36px;
+    position: absolute;
+    top: 10%;
+    right: -25%;
+}
+
+.future-para h2{
+    font-size: 24px;
+    padding-bottom: 5%;
+    font-family: "Overpass", sans-serif;
+    color: var(--Very-dark-blue-headings);
+    /* border: 2px solid red; */
+}
+.future-para p{
+    color: var(--Very-dark-desaturated-blue);
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-family: "Overpass", sans-serif;
+}
+
+
+
+.future-img{
+    width: 50%;
+    height:900px;
+    background-image: url(./images/illustration-editor-desktop.svg);
+    background-position:  left center;
+    background-repeat: no-repeat;
+   
+}
+
+
+
+
+
+
+/* +++++++++++++Infrastruvture-container ++++++++++++++++ */
+
+
+
+
+.Infrastruvture-container{
+   
+    height: 400px;
+    width: 100%;
+    border-radius: 0 100px 0 100px ;
+    background:linear-gradient(50deg,var(--Very-dark-gray-blue),var(--Very-dark-desaturated-blue));
+    /* margin-bottom: 100px; */
+   
+}
+
+.Infrastruvture-background-img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: url(./images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position:-250px 80% ;
+    display: flex;
+    gap: 13%;
+}
+
+
+
+.mobile-img{
+    position: relative;
+    top: -15%;
+    left: 8%;
+
+}
+
+
+.Infrastructure-content{
+  
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Infrastructure-content h2{
+    font-family: "Overpass", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+.Infrastructure-content p{
+    font-family: "Overpass", sans-serif;
+    font-size: 18px;
+    padding-right: 2%;
+    line-height: 30px;
+}
+
+
+/* +++++++++++++product-container ++++++++++++++++ */
+
+
+
+.product-container{
+    padding: 10% 5%;
+    display: flex;
+   
+}
+
+
+.product-img{
+    width: 50%;
+    height:900px;
+    background-image: url(./images/illustration-laptop-desktop.svg);
+    background-position:  right center;
+    background-repeat: no-repeat;
+}
+
+.product-content{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    width: 50%;
+    position: relative;
+    min-height:560px ;
+    padding: 0 6%;
+}
+.product-para h2{
+    font-size: 24px;
+    padding-bottom: 5%;
+    font-family: "Overpass", sans-serif;
+    color: var(--Very-dark-blue-headings);
+    /* border: 2px solid red; */
+}
+.product-para p{
+    color: var(--Very-dark-desaturated-blue);
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-family: "Overpass", sans-serif;
+}
+
+
+
+/* +++++++++++++footer-container ++++++++++++++++ */
+
+.footer-container{
+    background: var(--Very-dark-black-blue-footer-background);
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+.footer-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.footer-menu h3{
+    color:var(--Grayish-blue-footer-text);
+}
+.footer-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: auto;
+}
+.footer-list li{
+    color: var(--Grayish-blue-footer-text);
+}
+
+.footer-list li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer{
+    background: var(--Very-dark-black-blue-footer-background);
+}
+.attribution{
+    text-align: center;
+    font-size: 22px;
+}
+
+.attribution a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--Light-red);
+}
+
+/* font-family: "Overpass", sans-serif;  heading*/
+
+
+
+
+
